@@ -1,0 +1,22 @@
+\addvspace {10\p@ }
+\contentsline {xchapter}{Introduction}{1}{chapter.1}% 
+\addvspace {10\p@ }
+\contentsline {xchapter}{Preliminaries}{5}{chapter.2}% 
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Branching process example with $k=3$. Reference in \nobreakspace {}\cite {Kleinberg}.\relax }}{6}{figure.caption.12}% 
+\addvspace {10\p@ }
+\contentsline {xchapter}{Agents Propagation Model}{9}{chapter.3}% 
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Agent $\theta _1$ shares by sending without checking $(A_{1t}=S)$ the story via broadcast to a group of agents (red).\relax }}{13}{figure.caption.14}% 
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Sharing process of a story in different structures (a) Path and (b) Binary tree.\relax }}{14}{figure.caption.15}% 
+\contentsline {figure}{\numberline {3.3}{\ignorespaces The expected utility curves over different prior beliefs that follow a Gaussian distribution at first round. Parameters: $v=K=0.4$, $a=90\%$ and $\theta _i \sim \mathcal {N} (\mu =0.3,\sigma ^2=0.09)$.\relax }}{19}{figure.caption.16}% 
+\contentsline {figure}{\numberline {3.4}{\ignorespaces The resulting sharing tree after five reactions, from $(a)$ to $(e)$.\relax }}{20}{figure.caption.17}% 
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Regions (areas according to high and low thresholds) that characterize agents actions for different prior opinions in first round. Parameters: $v=K=0.4$, $a=90\%$ and $\theta _i \sim \mathcal {N} (\mu =0.3,\sigma ^2=0.09)$.\relax }}{25}{figure.caption.18}% 
+\contentsline {figure}{\numberline {3.6}{\ignorespaces The critical round $T_c$ at where the best response of an agent in that depth is to share without inspecting an event.\relax }}{27}{figure.caption.19}% 
+\addvspace {10\p@ }
+\contentsline {xchapter}{Platforms' Inspection Mechanisms}{29}{chapter.4}% 
+\contentsline {figure}{\numberline {4.1}{\ignorespaces The fact checking model of a social media service. The fact-checking process is assumed to an external service for the platform, which of course comes with a given cost for the platform. In practical scenarios, the platforms cannot conduct a fact check over stories because this would affect their policy, given that fact checking comes with a cost.\relax }}{30}{figure.caption.20}% 
+\contentsline {figure}{\numberline {4.2}{\ignorespaces An example of a ternary sharing tree where each agent is picked uniformly at random to react. The right triangle $L$ is a subtree of the sharing tree.\relax }}{32}{figure.caption.21}% 
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Evolution of platforms' utility on a binary propagation tree. On round $1$, the utility of agent was already evaluated and the policy was chosen by platform. This is a greedy approach of finding the optimal policy.\relax }}{41}{figure.caption.22}% 
+\addvspace {10\p@ }
+\contentsline {xchapter}{Conclusion and Future Work}{44}{chapter.5}% 
+\addvspace {10\p@ }
+\contentsline {xchapter}{Supplementary Material for Chapter \nobreakspace {}\ref {ch:Agents Propagation Model}}{50}{appendix.A}% 

@@ -1,0 +1,27 @@
+\chapter{Supplementary Material for Chapter ~\ref{ch:Agents Propagation Model}}
+\label{app:AppendixA}
+
+\textbf{Proof of proposition ~\ref{prop:CloseProbabilitiesActions}.}
+
+\begin{proof}
+	Let $B_{it}, S_{it}, C_{it}$ be the probabilities that agent $i$ chooses action $B,S,C$ respectively, at round $t$. Then, we have from ~\ref{prop:beliefs} that:
+\begin{equation}
+q_{it} = \mathbb{P}_i \{ V=F | m = y , H_i \} = \frac{\beta v w_{it}}{\beta v w_{it} + [a \theta_i + (1-a)(1-\theta_i)](1-v)}
+\label{eq:Appendix1}
+\end{equation}
+where $w_{it} = \displaystyle\prod_{k=0}^{t-1} \frac{S_{ik}}{S_{ik}+C_{ik}}$ and $w_{i0} = 1$. Independently from the fact that we are using a Gaussian distribution, we have that:
+	$$B_{it} = \mathbb{P} (q_{it}>1-K)$$
+	$$S_{it} = \mathbb{P} (1-q_{it}>1-K)$$
+	$$C_{it}= 1 - B_{it} - S_{it}$$
+	Using ~\ref{eq:Appendix1} and the properties a Gaussian pdf, we have the equations of the propositions.
+\end{proof}
+
+\textbf{Proofs of Lemmas ~\ref{lemma:prior} and ~\ref{lemma:monotontime}.}
+
+\begin{proof}
+	We will use proposition ~\ref{prop:beliefs} in order to prove those lemmas. It is obvious that:
+	$$q_{it} = \mathbb{P}_i \{ V=F | m = y , H_i \} = \frac{\beta v w_{it}}{\beta v w_{it} + [a \theta_i + (1-a)(1-\theta_i)](1-v)}$$ is strictly decreasing while $\theta$ is decreasing since $1/2<a<1$.
+	
+	For lemma ~\ref{lemma:monotontime} we have the likelihood function: $$\displaystyle{\frac{q_{it}}{1-q_{it}} = \frac{\beta v w_{it}}{[a\theta_i+(1-a)(1-\theta) ] (1-v) }}$$
+	and since it is strictly increasing in $w_{it}$ we have that $q_{it}$ is strictly increasing in $w_{it}$ which is non increasing since it is a product of fractions that are lower than $1$. This concludes the claim that $q_{it}$ is non increasing in $t$.
+\end{proof}

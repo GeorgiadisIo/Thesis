@@ -1,0 +1,38 @@
+
+\chapter{Conclusion and Future Work}
+\label{ch:ConclusionsFwork}
+
+
+\section{Conclusion }
+\label{sec:Concl}
+In this thesis, we study the problem of fake news detection, and we propose an intervention based model that leverages on the structural properties of the propagation network, which is derived from the agent's behavior. Based on current literature, we concluded that structural patterns provide a more interesting solution in contrast to other methodologies. After studying and adjusting the preexisting model given by ~\cite{papanastasiou}, which is a simplified version (a sequential model on directed paths), we propose a similar model, followed by and analysis, for a tree propagation network that consists of rational and socially responsible agents.
+
+The agent's behavior in the sequential case is straightforward, and the sharing process is easy to model. In the case of a tree propagation network, we face the challenge of how agents update their beliefs. First, we assumed that it is known to all agents how the average person reacts (what is the average agent's prior opinion), as well the sharing history of their predecessors. This is an assumption important in order to start working with the optimal strategy selection from platform's perspective, since platform needs a basic understanding of how agents interact with each other. Secondly, we provide a similar analysis for the above assumptions. Similarly to the related work, we prove the monotonicity and the existence of thresholds values, and we provide a simpler alternative to calculate those thresholds. Lastly, we assume that the distribution of prior opinions is a Gaussian distribution in order to simplify the model.
+
+In chapter ~\ref{ch:Platforms Problem}, we introduced the platform's role in our model. In the case where the propagation network is a directed path, it is easy to compute the time at where a sharing cascade triggers (critical round) by using dynamic programming. Given the critical round mentioned before, we are able to compute the optimal inspection time using the threshold values. In the case of tree propagation network structure there are challenges that concern the knowledge of the platform. First we noticed that the platform do not have perfect information over agents reactions. More specifically, whenever an agent is not reacting, platform cannot conclude if the story is blocked or checked and found fake by this agent. In order to deal with those issues in our proposed model, we specify how agents are picked to react, and afterwards, we formulate the probabilities:
+\begin{itemize}
+	\item At least one agent that have checked the story and decide it to share.
+	\item At least one agent that checked the story and decided to not share it.
+	
+\end{itemize}
+Since the inspection has perfect outcome, it is sufficient to find when the above events have high probability to occur, given a sharing tree. The above values are approximations of the actual event that the story is true or fake, respectively, for each case.
+
+We have also considered a similar approach to that in ~\cite{papanastasiou}, using a utility maximizing criterion in order to find earlier inspection time. In order to find that inspection time, we calculate the observed utility from the agents that already reacted (from the internal nodes of the tree propagation network) and the anticipated utility of the agents that are candidates to react in the current round (leaf nodes). By splitting the anticipated utility on two policies:
+
+\begin{itemize}
+	\item Global inspection (fact check from a third party).
+	\item Let the process evolve to the next round.
+\end{itemize}
+we compare them and find the first round, if it exists such round, where the global inspection becomes more profitable to the platform, using the appropriate threshold values.
+
+In closing, our setup has some important advantages against the approaches in related literature. First, the model we propose works under uncertainty without the exact knowledge of what the agent's prior opinions are. This is important since there are few cases where we know what exactly a social media user believes over a topic, i.e. we do not know the prior beliefs of agents over newly emerging topics. Secondly, we utilize the fact that the underlying network structure is a tree. In our thresholds values, we have quantities that are affected both from depth as well the average degree $k$ of our tree.  We noticed that a tree structure provides more information in contrast to a path in order to decide the platform's policy, given a sharing tree. One last concluding remark is that our model is not agnostic to the motives behind the propagation. The building block in this setup is the probabilistic representation of stories,which affect both user behavior and the inspection time of the platform as well.
+
+\section{Future Work}
+\label{sec:FW}
+
+In the chapter where we provide the analysis of agents, we assumed that agents are social responsible actors that propagate only truthful news. In reality, this assumption does not hold for all agents. There are incidents where agent react unpredictably (for example, propagate something fake willingly as a joke) or share a story because it aligns with their own opinion. This partisan behavior is discussed in ~\cite{papanastasiou} in the case of paths, where agents use the probability of their own belief that a story aligns with their own prior opinion. In that case, it is interesting to make an analysis of the underlying properties that such a network has and how we can find a similar solution in order to find an optimal interruption time.
+
+In our work, the inspection that occurs from both the agents and the fact checking organization is yields perfect result. While in most cases it is true, since there is a vast amount of valid information available to help us fact check news stories, it is not always the case. There are is a work provided in ~\cite{ImpliedTEpennycock} where flagging mechanisms explored to deal with the phenomenon of the implied truth effect, which is the case where users come to conclusions based mostly on fact checking evaluations before making their own research. An interesting analysis would be the case where the inspection occur with an error and how this affects the underlying network in our model and.
+
+Another case study that has is interesting is the network topology of the sharing process. In our case, we model a tree structure, where reactions between different levels are not present. This translates to the case where agents are receiving the story from only one agent at some round $t_k$ and cannot receive the same story from anyone else. In reality, agents might receive the same story from different sources/agents in different time periods, and the underlying sharing network has the form of a directed acyclic graph. In order to follow a similar analysis, we need to specify how agent update the beliefs now that multiple paths reach to them and what triggers her reaction. 
+
